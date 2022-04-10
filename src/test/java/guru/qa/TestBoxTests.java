@@ -1,6 +1,8 @@
 package guru.qa;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.text;
@@ -10,9 +12,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class TestBoxTests {
 
     @BeforeAll
-    static void setUp () {
+    static void ChromeSetUp () {
         Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";
+    }
+
+    @AfterAll
+    static void closeChrome (){
+        WebDriverRunner.closeWindow();
     }
 
     @Test
