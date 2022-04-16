@@ -33,12 +33,12 @@ public class RegFormRandomUtils {
         return number;
     }
 
-    static String getGender(){
+    public static String getGender(){
         int r = (int) (Math.random()*3);
         return new String [] {"Male","Female","Other"}[r];
     }
 
-    static String getHobby(){
+    public static String getHobby(){
         int r = (int) (Math.random()*3);
         return new String [] {"Reading","Sports","Music"}[r];
     }

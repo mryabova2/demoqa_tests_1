@@ -1,18 +1,15 @@
-package guru.qa;
-
+package guru.qa.tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import guru.qa.RegFormTestData;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pages.RegFormPage;
-
-
+import guru.qa.pages.RegFormPage;
 
 public class RegFormWithPOTests {
     RegFormPage regFormPage = new RegFormPage();
     RegFormTestData regFormTestData = new RegFormTestData();
-
 
     @BeforeAll
     static void ChromeSetUp () {
@@ -25,7 +22,6 @@ public class RegFormWithPOTests {
     static void closeChrome (){
         WebDriverRunner.closeWindow();
     }
-
 
     @Test
     void fillFormTest () {

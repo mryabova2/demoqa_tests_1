@@ -6,7 +6,7 @@ import static java.lang.String.format;
 
 public class RegFormTestData {
     Faker faker = new Faker();
-    String firstName = faker.name().firstName(),
+    public String  firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             fullName = format("%s %s", firstName, lastName),
             email = faker.internet().emailAddress(),
